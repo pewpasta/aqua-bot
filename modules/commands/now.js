@@ -1,4 +1,4 @@
-const { createAnnounce } = require('../utils');
+const { createAnnounceEmbed } = require('../utils');
 
 module.exports = {
   name: 'now',
@@ -8,7 +8,7 @@ module.exports = {
     '.now https://www.youtube.com/watch?v=fE2h3lGlOsk - Adds the Youtube video to the front of the queue.\n.now wannabe itzy - Adds the Youtube video corresponding to Wannabe Itzy to the front of the queue.\nWorks for Spotify playlists and tracks as well as Youtube playlists.',
   async execute(message, args) {
     if (args.length === 0) {
-      const embed = createAnnounce(
+      const embed = createAnnounceEmbed(
         'Incorrect Usage',
         'Incorrect usage, $now [youtube link or search query]',
         '#ffbaba'
